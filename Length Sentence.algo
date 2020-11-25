@@ -1,0 +1,44 @@
+ALGORITHM LOfSentence
+VAR
+
+sentence: string;
+i: INTEGER := 0; 
+e: INTEGER  := 0; 
+n: INTEGER := 0;
+
+
+BEGIN
+
+REPEAT
+    write("write a sentence that ends with a point");
+    read(sentence);
+
+UNTIL (length(sentence)>0 and sentence[length(sentence)-1]=".") 
+
+
+
+
+FOR i FROM 0 TO length(sentence)-1 STEP 1  DO
+    IF (sentence[i]=" ") THEN
+        e := e+1;
+    END_IF
+
+    SWITCH (sentence[i]) DO
+    defaut: 
+        case "a" : n := n+1; break;
+        case "e" : n := n+1; break;
+        case "o" : n := n+1; break;
+        case "u" : n := n+1; break;
+        case "i" : n := n+1; break;
+        case "y" : n := n+1; break;
+        
+    END_SWITCH
+
+END_FOR
+
+write("length of the sentence = ", length(sentence));
+write("Nbr of words =", e+1);
+write("nbr of vowels =", n);
+
+
+END
