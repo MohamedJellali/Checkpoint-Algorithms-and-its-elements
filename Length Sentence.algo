@@ -16,8 +16,6 @@ REPEAT
 UNTIL (length(sentence)>0 and sentence[length(sentence)-1]=".") 
 
 
-
-
 FOR i FROM 0 TO length(sentence)-1 STEP 1  DO
     IF (sentence[i]=" ") THEN
         e := e+1;
